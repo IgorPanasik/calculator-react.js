@@ -20,6 +20,11 @@
   box-sizing: border-box;
 }
 
+body,
+html {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -120,6 +125,14 @@ button:hover {
   color: black;
   outline: 1px solid #c1c1c1;
   z-index: 3;
+}
+
+@media (max-width: 800px) {
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+  }
 }
 
 @media (max-width: 400px) {
